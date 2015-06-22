@@ -26,7 +26,7 @@ feature 'Allow the user to play against the computer' do
      expect(page).to have_content "Fire at co-ordinates:"
      fill_in('coords', with:'C4')
      click_button('Submit')
-     # should change the board section 'C4' to miss
-     expect('C4').to eq 'M'
+     # should change the board section 'C4' to hit
+     expect('C4').to eq 'H'
    end
 end
