@@ -5,8 +5,9 @@ class BattleshipsWeb < Sinatra::Base
     erb :index
   end
   set :views, proc { File.join(root, '..', 'views') }
-  get '/name-entry' do
-    "What's your name?"    
+  get '/name_entry' do
+    @visitor = params[:name]
+    erb :name_entry
   end
 
   # start the server if ruby file executed directly
