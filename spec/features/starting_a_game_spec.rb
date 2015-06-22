@@ -13,7 +13,7 @@ end
 
 feature 'Allow the user to play against the computer' do
 	scenario 'Starting a new game at a randomly generated board' do
-		click_button 'A1'
+		visit '/board'
+    click_button 'A1'
 	end
 end
-	
