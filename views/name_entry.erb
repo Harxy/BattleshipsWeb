@@ -1,5 +1,7 @@
 <p>What's your name?</p>
-  <% if @visitor %>
+  <% if @visitor === 0 %>
+    Hello PLAYER ONE.
+  <% elsif @visitor %>
     Hello, <%= @visitor%>!
   <% else %>
   <form action="/name_entry">

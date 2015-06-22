@@ -10,6 +10,7 @@ class BattleshipsWeb < Sinatra::Base
 
   get '/name_entry' do
     @visitor = params[:name]
+    @visitor = 'Player 1' if @visitor == ''
     erb :name_entry
   end
 
@@ -20,6 +21,9 @@ class BattleshipsWeb < Sinatra::Base
     erb :board
   end
 
+  get '/game' do
+    erb :game    
+  end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
