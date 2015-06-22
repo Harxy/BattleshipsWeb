@@ -10,6 +10,11 @@ class BattleshipsWeb < Sinatra::Base
     erb :name_entry
   end
 
+  get '/board' do
+    erb :board
+  end
+  
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

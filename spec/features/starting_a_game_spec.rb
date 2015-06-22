@@ -10,3 +10,10 @@ feature 'Starting a new game' do
     expect(page).to have_content "Hello, dave"
   end
 end
+
+feature 'Allow the user to play against the computer' do
+	scenario 'Starting a new game at a randomly generated board' do
+		click_button 'A1'
+	end
+end
+	
